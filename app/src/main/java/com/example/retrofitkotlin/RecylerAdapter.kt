@@ -1,4 +1,4 @@
-package com.example.RetrofitKotlin
+package com.example.retrofitkotlin
 
 import android.view.LayoutInflater
 import android.view.View
