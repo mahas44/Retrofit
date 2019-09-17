@@ -15,9 +15,9 @@ class RecylerAdapter(resultPopular: List<Data.Results>?) : RecyclerView.Adapter<
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
 
         var inflater = LayoutInflater.from(parent?.context)
-        var tekSatirList = inflater.inflate(R.layout.single_line_list, parent, false)
+        var singleLineList = inflater.inflate(R.layout.single_line_list, parent, false)
 
-        return ListViewHolder(tekSatirList)
+        return ListViewHolder(singleLineList)
 
     }
 
@@ -41,6 +41,7 @@ class RecylerAdapter(resultPopular: List<Data.Results>?) : RecyclerView.Adapter<
 
         fun setData(itemView: Data.Results?){
             title.text = itemView?.original_title
+            // w200, w300, w400, w500 are represents image size
             Picasso.get().load("https://image.tmdb.org/t/p/w200/"+itemView?.poster_path).into(poster)
             date.text = itemView?.release_date
         }
